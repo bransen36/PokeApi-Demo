@@ -1,0 +1,163 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+  min-height: 100svh;
+}
+
+.app h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.selected-trigger-section {
+  margin: 1.5rem 0 1rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.selected-trigger-section h2 {
+  font-size: 1.1rem;
+  color: var(--text-h);
+}
+
+/* Trigger list */
+
+.trigger-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
+}
+
+.trigger-item {
+  padding: 0.65rem 0.85rem;
+  background: var(--poke-cream);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-h);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.trigger-item:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+.trigger-item:active {
+  background: rgba(239, 83, 80, 0.08);
+  border-color: var(--poke-red);
+}
+
+/* Species list */
+
+.species-section {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.species-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 0.4rem;
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.species-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.species-list::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 99px;
+}
+
+.species-item {
+  padding: 0.4rem 0.5rem;
+  background: var(--poke-cream);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  color: var(--text-h);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.species-item:hover {
+  border-color: var(--border-strong);
+}
+
+.species-item.selected {
+  font-weight: 700;
+  background: rgba(61, 90, 254, 0.08);
+  border-color: var(--poke-blue);
+}
+
+/* Evolution details */
+
+.evolution-details {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.evolution-details h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-h);
+}
+
+.evolution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.evolution-item {
+  padding: 0.85rem 1rem;
+  background: var(--poke-cream);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--poke-yellow);
+  font-size: 0.9rem;
+  color: var(--text-h);
+  line-height: 1.45;
+}
+
+/* Status messages */
+
+.status-message {
+  text-align: center;
+  padding: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.status-message.error {
+  color: var(--poke-red-dark);
+}
+
+.app > .status-message {
+  max-width: 960px;
+  margin: 2rem auto;
+}
