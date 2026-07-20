@@ -30,9 +30,7 @@ export const fetchEvolutionTriggerDetail = async (
 };
 
 export const fetchSpeciesEvolutionChain = async (speciesName: string) => {
-  const speciesRes = await fetch(
-    `https://pokeapi.co/api/v2/pokemon-species/${speciesName}`,
-  );
+  const speciesRes = await fetch(`${BASE_URL}/pokemon-species/${speciesName}`);
   if (!speciesRes.ok) throw new Error("Failed to fetch species");
   const speciesData = await speciesRes.json();
 
